@@ -1,0 +1,39 @@
+
+> oxyra-part1-governed-gift-pipeline@1.0.0 start
+> node scripts/run-scenarios.mjs
+
+[
+  {
+    "scenario": "normal",
+    "evidence": "合成适配器场景，未调用真实模型或画面检测器",
+    "state": "REVIEW_READY",
+    "reason": "HUMAN_APPROVAL_REQUIRED",
+    "attempts": 1,
+    "renders": 1,
+    "spent_cost_units": 4,
+    "published": false,
+    "production_release": "BLOCKED_PENDING_HUMAN_APPROVAL"
+  },
+  {
+    "scenario": "religion",
+    "evidence": "合成适配器场景，未调用真实模型或画面检测器",
+    "state": "REVIEW_READY",
+    "reason": "HUMAN_APPROVAL_REQUIRED",
+    "attempts": 2,
+    "renders": 1,
+    "spent_cost_units": 8,
+    "published": false,
+    "production_release": "BLOCKED_PENDING_HUMAN_APPROVAL"
+  },
+  {
+    "scenario": "geometry",
+    "evidence": "合成适配器场景，未调用真实模型或画面检测器",
+    "state": "OPEN",
+    "reason": "REPEATED_GEOMETRY_FINGERPRINT",
+    "attempts": 2,
+    "renders": 2,
+    "spent_cost_units": 8,
+    "published": false,
+    "production_release": "BLOCKED_PENDING_HUMAN_APPROVAL"
+  }
+]

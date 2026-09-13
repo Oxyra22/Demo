@@ -1,0 +1,11 @@
+﻿pair_id,arm,market_ref,complexity,quality_contract_hash,source_rights_ref,brief_clarification_rounds,handoff_count,vendor_revision_rounds,research_min,prompt_or_brief_min,production_min,review_min,ai_report_recheck_min,rework_min,coordination_min,waiting_h,model_gpu_cost,asset_license_cost,vendor_invoice_cost,discard_cost,currency,quality_score,hard_gates_pass,accepted,notes
+PAIR-1,HUMAN,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-1,AI_ASSISTED,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-2,HUMAN,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-2,AI_ASSISTED,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-3,HUMAN,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-3,AI_ASSISTED,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-4,HUMAN,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-4,AI_ASSISTED,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-5,HUMAN,,,,,,,,,,,,,,,,,,,,,,,,
+PAIR-5,AI_ASSISTED,,,,,,,,,,,,,,,,,,,,,,,,

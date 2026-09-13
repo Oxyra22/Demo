@@ -1,0 +1,20 @@
+{
+  "name": "oxyra-part1-governed-gift-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": "Oxyra",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/run-scenarios.mjs",
+    "demo": "node scripts/run-scenarios.mjs",
+    "test": "node tests/pipeline.test.mjs && node --test tests/governed-v2.test.mjs tests/governed-v3.test.mjs tests/governed-v3-regression.test.mjs",
+    "test:governance": "node --test tests/governed-v3.test.mjs tests/governed-v3-regression.test.mjs",
+    "test:planning": "node --test planning/capacity.test.mjs planning/critical-path.test.mjs planning/submission-plan.test.mjs",
+    "test:all": "npm test && npm run test:planning && npm run check:examples",
+    "check:examples": "node scripts/check-examples.mjs",
+    "plan": "node scripts/run-plan.mjs"
+  }
+}

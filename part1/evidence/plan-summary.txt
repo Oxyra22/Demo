@@ -1,0 +1,910 @@
+
+> oxyra-part1-governed-gift-pipeline@1.0.0 plan
+> node scripts/run-plan.mjs
+
+{
+  "label": "Oxyra的交前规划补充；当前真实ROI证据为PENDING；以下通过情景均为预算与资源按时满足的模拟，尚未执行。",
+  "scope": {
+    "required_regions": 50,
+    "planned_skus": 51,
+    "scope_change_approved": false
+  },
+  "calendar": {
+    "asOf": "2026-09-13",
+    "start": "2026-09-14",
+    "target": "2026-10-01",
+    "timeZone": "Asia/Shanghai",
+    "releaseTime": "09:00",
+    "freezeDays": 2,
+    "excludedDates": [],
+    "holidayAssumption": "只排除周末；没有代替各区域节假日与供应商工作日历，确认后必须按不可用日重排。",
+    "currentDates": [
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "originalDates": [
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-07",
+      "2026-09-08",
+      "2026-09-09",
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-14",
+      "2026-09-15",
+      "2026-09-16",
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-21",
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-09-25",
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "originalStartIsPast": true,
+    "currentProductionDays": 11
+  },
+  "current_deadline_assumed_pass": {
+    "approved_skus": 10,
+    "approved_regions": 10,
+    "last_approval_day": 11,
+    "planned_active_h": {
+      "research": 102,
+      "production": 168,
+      "review": 112,
+      "total": 382
+    },
+    "spent_active_h": {
+      "research": 102,
+      "production": 46.5,
+      "review": 23,
+      "total": 171.5
+    },
+    "remaining_active_h": {
+      "research": 0,
+      "production": 121.5,
+      "review": 89,
+      "total": 210.5
+    },
+    "deferred": [
+      {
+        "id": "SIM-SKU-010",
+        "parent": "REQ-010",
+        "stage": "REWORK_PRODUCTION",
+        "stage_remaining_h": 1.5,
+        "ready_day": 13,
+        "gate": "REWORK_WAIT"
+      },
+      {
+        "id": "SIM-SKU-012",
+        "parent": "REQ-012",
+        "stage": "FIRST_REVIEW",
+        "stage_remaining_h": 2,
+        "ready_day": 10,
+        "gate": "HANDOFF_WAIT"
+      },
+      {
+        "id": "SIM-SKU-013",
+        "parent": "REQ-013",
+        "stage": "FIRST_REVIEW",
+        "stage_remaining_h": 2,
+        "ready_day": 10,
+        "gate": "HANDOFF_WAIT"
+      },
+      {
+        "id": "SIM-SKU-014",
+        "parent": "REQ-014",
+        "stage": "FIRST_REVIEW",
+        "stage_remaining_h": 2,
+        "ready_day": 10,
+        "gate": "HANDOFF_WAIT"
+      },
+      {
+        "id": "SIM-SKU-015",
+        "parent": "REQ-015",
+        "stage": "FIRST_REVIEW",
+        "stage_remaining_h": 2,
+        "ready_day": 10,
+        "gate": "HANDOFF_WAIT"
+      },
+      {
+        "id": "SIM-SKU-016",
+        "parent": "REQ-016",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-017",
+        "parent": "REQ-017",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-018",
+        "parent": "REQ-018",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-019",
+        "parent": "REQ-019",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-020",
+        "parent": "REQ-020",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-021",
+        "parent": "REQ-021",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-022",
+        "parent": "REQ-022",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-023",
+        "parent": "REQ-023",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-024",
+        "parent": "REQ-024",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-025",
+        "parent": "REQ-025",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-026",
+        "parent": "REQ-026",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-027",
+        "parent": "REQ-027",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-028",
+        "parent": "REQ-028",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-029",
+        "parent": "REQ-029",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-030",
+        "parent": "REQ-030",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-031",
+        "parent": "REQ-031",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-032",
+        "parent": "REQ-032",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-033",
+        "parent": "REQ-033",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-034",
+        "parent": "REQ-034",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-035",
+        "parent": "REQ-035",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-036",
+        "parent": "REQ-036",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-037",
+        "parent": "REQ-037",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-038",
+        "parent": "REQ-038",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-039",
+        "parent": "REQ-039",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-040",
+        "parent": "REQ-040",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-041",
+        "parent": "REQ-041",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-042",
+        "parent": "REQ-042",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-043",
+        "parent": "REQ-043",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-044",
+        "parent": "REQ-044",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-045",
+        "parent": "REQ-045",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-046",
+        "parent": "REQ-046",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-047",
+        "parent": "REQ-047",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-048",
+        "parent": "REQ-048",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-049",
+        "parent": "REQ-049",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-050",
+        "parent": "REQ-050",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-051",
+        "parent": "REQ-017",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "PREVIOUS_BATCH_APPROVAL_WAIT"
+      }
+    ],
+    "batches": [
+      {
+        "batch": "PILOT_5",
+        "total": 5,
+        "approved": 5,
+        "complete_day": 6
+      },
+      {
+        "batch": "ASSIST_10",
+        "total": 10,
+        "approved": 5,
+        "complete_day": null
+      },
+      {
+        "batch": "SCALE_36",
+        "total": 36,
+        "approved": 0,
+        "complete_day": null
+      }
+    ],
+    "published": false
+  },
+  "current_deadline_evidence_pending": {
+    "approved_skus": 5,
+    "approved_regions": 5,
+    "last_approval_day": 6,
+    "planned_active_h": {
+      "research": 102,
+      "production": 168,
+      "review": 112,
+      "total": 382
+    },
+    "spent_active_h": {
+      "research": 102,
+      "production": 16.5,
+      "review": 11,
+      "total": 129.5
+    },
+    "remaining_active_h": {
+      "research": 0,
+      "production": 151.5,
+      "review": 101,
+      "total": 252.5
+    },
+    "deferred": [
+      {
+        "id": "SIM-SKU-006",
+        "parent": "REQ-006",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-007",
+        "parent": "REQ-007",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-008",
+        "parent": "REQ-008",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-009",
+        "parent": "REQ-009",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-010",
+        "parent": "REQ-010",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-011",
+        "parent": "REQ-011",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-012",
+        "parent": "REQ-012",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-013",
+        "parent": "REQ-013",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-014",
+        "parent": "REQ-014",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-015",
+        "parent": "REQ-015",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-016",
+        "parent": "REQ-016",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-017",
+        "parent": "REQ-017",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-018",
+        "parent": "REQ-018",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-019",
+        "parent": "REQ-019",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-020",
+        "parent": "REQ-020",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-021",
+        "parent": "REQ-021",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-022",
+        "parent": "REQ-022",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-023",
+        "parent": "REQ-023",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-024",
+        "parent": "REQ-024",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-025",
+        "parent": "REQ-025",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-026",
+        "parent": "REQ-026",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-027",
+        "parent": "REQ-027",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-028",
+        "parent": "REQ-028",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-029",
+        "parent": "REQ-029",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-030",
+        "parent": "REQ-030",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-031",
+        "parent": "REQ-031",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-032",
+        "parent": "REQ-032",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-033",
+        "parent": "REQ-033",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-034",
+        "parent": "REQ-034",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-035",
+        "parent": "REQ-035",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-036",
+        "parent": "REQ-036",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-037",
+        "parent": "REQ-037",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-038",
+        "parent": "REQ-038",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-039",
+        "parent": "REQ-039",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-040",
+        "parent": "REQ-040",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-041",
+        "parent": "REQ-041",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-042",
+        "parent": "REQ-042",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-043",
+        "parent": "REQ-043",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-044",
+        "parent": "REQ-044",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-045",
+        "parent": "REQ-045",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-046",
+        "parent": "REQ-046",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-047",
+        "parent": "REQ-047",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-048",
+        "parent": "REQ-048",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-049",
+        "parent": "REQ-049",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-050",
+        "parent": "REQ-050",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      },
+      {
+        "id": "SIM-SKU-051",
+        "parent": "REQ-017",
+        "stage": "PRODUCTION",
+        "stage_remaining_h": 3,
+        "ready_day": null,
+        "gate": "ECONOMIC_EVIDENCE_OR_APPROVAL_WAIT"
+      }
+    ],
+    "batches": [
+      {
+        "batch": "PILOT_5",
+        "total": 5,
+        "approved": 5,
+        "complete_day": 6
+      },
+      {
+        "batch": "ASSIST_10",
+        "total": 10,
+        "approved": 0,
+        "complete_day": null
+      },
+      {
+        "batch": "SCALE_36",
+        "total": 36,
+        "approved": 0,
+        "complete_day": null
+      }
+    ],
+    "published": false
+  },
+  "full_scope_conditional_replan": {
+    "summary": {
+      "approved_skus": 51,
+      "approved_regions": 50,
+      "last_approval_day": 24,
+      "planned_active_h": {
+        "research": 102,
+        "production": 168,
+        "review": 112,
+        "total": 382
+      },
+      "spent_active_h": {
+        "research": 102,
+        "production": 168,
+        "review": 112,
+        "total": 382
+      },
+      "remaining_active_h": {
+        "research": 0,
+        "production": 0,
+        "review": 0,
+        "total": 0
+      },
+      "deferred": [],
+      "batches": [
+        {
+          "batch": "PILOT_5",
+          "total": 5,
+          "approved": 5,
+          "complete_day": 6
+        },
+        {
+          "batch": "ASSIST_10",
+          "total": 10,
+          "approved": 10,
+          "complete_day": 16
+        },
+        {
+          "batch": "SCALE_36",
+          "total": 36,
+          "approved": 36,
+          "complete_day": 24
+        }
+      ],
+      "published": false
+    },
+    "completion_date": "2026-10-15",
+    "freeze_dates": [
+      "2026-10-16",
+      "2026-10-19"
+    ],
+    "earliest_proposed_release_date": "2026-10-20"
+  },
+  "cost_ceiling": {
+    "productionActiveHours": 382,
+    "manualControlsHours": 40,
+    "comparisonHours": 14,
+    "adjudicationReserveHours": 2,
+    "totalReservedActiveHours": 438,
+    "note": "438h是本情景主动工时预算上限，包含最多2h裁决预留；未用预留不作为实付。货币费率、模型/GPU、素材授权、外包报价与最低预约费另计，按同一事件或发票去重。"
+  }
+}

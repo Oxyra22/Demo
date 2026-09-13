@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0",
+  "request_id": "SIM-EXAMPLE-001",
+  "tool": "render_gift_asset",
+  "arguments": {
+    "workflow_id": "approved-v1",
+    "prompt": "Preserve rounded silhouette, pearl finish and centered composition.",
+    "seed": 1,
+    "asset_ids": [
+      "neutral-1"
+    ],
+    "motif_ids": [],
+    "canvas": {
+      "w": 720,
+      "h": 1280
+    },
+    "max_duration_ms": 2500
+  }
+}

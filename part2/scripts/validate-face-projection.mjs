@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { projectFacePoint } from '../lib/face-projection.ts';
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-8,`${a} != ${b}`);
+const center=projectFacePoint({x:.5,y:.5},640,360,360,640);
+near(center.x,.5);near(center.y,.5);
+const left=projectFacePoint({x:.4,y:.5},640,360,360,640);
+near(left.x,.5+.1*(640/360)/(360/640));
+const full=projectFacePoint({x:.2,y:.3},640,360,640,360);
+near(full.x,.8);near(full.y,.3);
+const square=projectFacePoint({x:.5,y:.25},640,360,400,400);
+near(square.x,.5);near(square.y,.25);
+console.log('7 face projection assertions passed: cover crop, mirror, aspect ratio. Not a real-camera accuracy claim.');

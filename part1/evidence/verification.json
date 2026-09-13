@@ -1,0 +1,36 @@
+{
+  "author": "Oxyra",
+  "verified_on": "2026-09-13",
+  "runtime": {
+    "node": "v22.14.0",
+    "npm": "10.9.2"
+  },
+  "dependencies": [],
+  "commands": {
+    "npm run test:all": {
+      "exit_code": 0,
+      "node_governance_tests": 90,
+      "pass": 90,
+      "fail": 0,
+      "current_v3_tests": 72,
+      "v2_compatibility_tests": 18,
+      "pipeline_assertions": 28,
+      "audit_gates_included": 8,
+      "planning_tests": 47,
+      "planning_pass": 47,
+      "planning_fail": 0,
+      "examples": "PASS"
+    },
+    "npm start": {
+      "exit_code": 0,
+      "all_published": false
+    },
+    "npm run plan": {
+      "exit_code": 0,
+      "evidence": "SIMULATED_PLANNING_NOT_PRODUCTION_OUTPUT"
+    }
+  },
+  "network_used": false,
+  "published": false,
+  "production_model_validation": false
+}

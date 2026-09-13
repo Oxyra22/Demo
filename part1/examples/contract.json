@@ -1,0 +1,16 @@
+{
+  "request_id": "SIM-EXAMPLE-001",
+  "route": "SIM-CULTURE-017",
+  "policy_ref": "SYNTHETIC-P1",
+  "workflow_ids": [
+    "approved-v1"
+  ],
+  "approved_asset_ids": [
+    "neutral-1"
+  ],
+  "max_canvas": {
+    "w": 1080,
+    "h": 1920
+  },
+  "max_duration_ms": 3000
+}

@@ -1,0 +1,79 @@
+{
+  "copied_on": "2026-09-13",
+  "author": "Oxyra",
+  "entry": "governed-runner-v3.mjs",
+  "frozen_document_sha256": "a488b54fe9161e4814a150032abaa3d3d181a257ddd02c136ca19212deb7abd0",
+  "note": "我按明确文件清单复制源码、测试与冻结正文。哈希对应被复制的原文件；本包新增的命令入口和说明单独列在文件清单。",
+  "files": [
+    {
+      "path": "governed-runner-v3.mjs",
+      "source_sha256": "29f272f183999cd92549fab7792e8f745a6eb365f24cc0ffb1ed1840d5fa0474"
+    },
+    {
+      "path": "governed-runner-v2.mjs",
+      "source_sha256": "6300af860b07ab8d1d47acf09da122469f025a8a6a2116ffa61dbad26c794ee3"
+    },
+    {
+      "path": "governed-scenarios-v3.mjs",
+      "source_sha256": "cbfbd8f4f2d7bfde8c2f280eb3dd6e08ea1b40a795029373b662e03702d9dfb5"
+    },
+    {
+      "path": "pipeline.mjs",
+      "source_sha256": "5a2367561afa80eef70891cc34d4d05703f87a70d3b8826a3498ea68e8f32b86"
+    },
+    {
+      "path": "tests/pipeline.test.mjs",
+      "source_sha256": "0b4d74c752a45cc30bfcee40e3d0a5ed39ce890e0994d2d103c0929ed3043c07"
+    },
+    {
+      "path": "tests/governed-v2.test.mjs",
+      "source_sha256": "119a9e43cf5706f10d68b84981c8fa699b5ffb6b45c343167c0f2a7181f1b3e4"
+    },
+    {
+      "path": "tests/governed-v3.test.mjs",
+      "source_sha256": "902ae5db340d08365ede89a772c9f4389a207c3bb9ddb29699b5dc8f8f88cd3f"
+    },
+    {
+      "path": "tests/governed-v3-regression.test.mjs",
+      "source_sha256": "d0c38651bbd7ee22673b85f3dea38973dd0c925e62df259be6b6aa151f132cbc"
+    },
+    {
+      "path": "planning/capacity.mjs",
+      "source_sha256": "8c5be70b4a474f1c4a03a0f624b5e714c3696ca2cb8a5cd8a2115da515977009"
+    },
+    {
+      "path": "planning/capacity.test.mjs",
+      "source_sha256": "6b2b992aef54734796ee0cf2345a3e5c16382d147aa7ae8d0201fc73e93fbd07"
+    },
+    {
+      "path": "planning/critical-path.mjs",
+      "source_sha256": "d48d1609782b72859fe0efa5fa0969dec8525dc9e7a7e1b50186ebf6753c5318"
+    },
+    {
+      "path": "planning/critical-path.test.mjs",
+      "source_sha256": "b7f331be976cf9969264e632e50b28c51199e3b01dcdc4583710858f0ccb020a"
+    },
+    {
+      "path": "planning/submission-plan.mjs",
+      "source_sha256": "cfdbf760cd7ce76a7dac5382d847b813212dfc815b3cfaf96e700689add56d87"
+    },
+    {
+      "path": "planning/submission-plan.test.mjs",
+      "source_sha256": "3ad9f7748a8841789a0215e938d6874db8c68c1cf385f67e094061cf1a8e7178"
+    },
+    {
+      "path": "docs/part1_正式正文.md",
+      "source_sha256": "a488b54fe9161e4814a150032abaa3d3d181a257ddd02c136ca19212deb7abd0"
+    },
+    {
+      "path": "docs/两地文化证据卡.md",
+      "source_sha256": "f90e3e9bffe247200b0a097ce7c4facfd56f39c8820a392c016c898c7955d739"
+    },
+    {
+      "path": "examples/沟通成本实验空表.csv",
+      "source_sha256": "68e74288b5901fcd6d4b92b9aa8931da4180e82b20de8fe2f046a47d923f6ab1",
+      "packaged_sha256": "931c54364d0c9b11fbac19b55f47dc1cad13491f8e64d9d9c42a06766c42f08f",
+      "normalization": "原CSV末尾无换行；apply_patch副本增加一个末尾LF，表头与单元格完全不变。"
+    }
+  ]
+}

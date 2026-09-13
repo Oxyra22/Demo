@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gift generation response — structural example",
+  "description": "我用此文件说明响应形状。运行时以 governed-runner-v3.mjs 的 validateCall 和冻结合同校验为准；许可资产、工作流、政策内容、预算与空白字符串等语义条件须由运行器检查。",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "request_id",
+        "tool",
+        "arguments"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "2.0"
+        },
+        "request_id": {
+          "type": "string"
+        },
+        "tool": {
+          "const": "render_gift_asset"
+        },
+        "arguments": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "workflow_id",
+            "prompt",
+            "seed",
+            "asset_ids",
+            "motif_ids",
+            "canvas",
+            "max_duration_ms"
+          ],
+          "properties": {
+            "workflow_id": {
+              "type": "string"
+            },
+            "prompt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "seed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "asset_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "motif_ids": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string"
+              }
+            },
+            "canvas": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "w",
+                "h"
+              ],
+              "properties": {
+                "w": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "h": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "max_duration_ms": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "request_id",
+        "decision",
+        "reason"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "2.0"
+        },
+        "request_id": {
+          "type": "string"
+        },
+        "decision": {
+          "const": "REFUSE"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  ]
+}

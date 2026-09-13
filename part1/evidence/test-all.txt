@@ -1,0 +1,723 @@
+
+> oxyra-part1-governed-gift-pipeline@1.0.0 test:all
+> npm test && npm run test:planning && npm run check:examples
+
+
+> oxyra-part1-governed-gift-pipeline@1.0.0 test
+> node tests/pipeline.test.mjs && node --test tests/governed-v2.test.mjs tests/governed-v3.test.mjs tests/governed-v3-regression.test.mjs
+
+PASS · 28 pipeline assertions · 8/8 deterministic audit gates
+TAP version 13
+# Subtest: valid call passes prototype only, never publishes
+ok 1 - valid call passes prototype only, never publishes
+  ---
+  duration_ms: 4.557166
+  ...
+# Subtest: prose, extra fields and fictitious tool/assets cannot execute
+ok 2 - prose, extra fields and fictitious tool/assets cannot execute
+  ---
+  duration_ms: 0.187375
+  ...
+# Subtest: oversized canvas rejected
+ok 3 - oversized canvas rejected
+  ---
+  duration_ms: 0.116875
+  ...
+# Subtest: wrong market policy produces no render
+ok 4 - wrong market policy produces no render
+  ---
+  duration_ms: 0.186708
+  ...
+# Subtest: expired policy produces no render
+ok 5 - expired policy produces no render
+  ---
+  duration_ms: 0.076916
+  ...
+# Subtest: explicit forbidden ID blocks despite detector PASS, then bounded repair
+ok 6 - explicit forbidden ID blocks despite detector PASS, then bounded repair
+  ---
+  duration_ms: 0.662667
+  ...
+# Subtest: omitting motif ID cannot bypass trusted preflight
+ok 7 - omitting motif ID cannot bypass trusted preflight
+  ---
+  duration_ms: 0.386167
+  ...
+# Subtest: high severity rejection never renders
+ok 8 - high severity rejection never renders
+  ---
+  duration_ms: 0.246708
+  ...
+# Subtest: unknown detector report never renders
+ok 9 - unknown detector report never renders
+  ---
+  duration_ms: 0.973
+  ...
+# Subtest: actual output policy failure remains quarantined and cannot publish
+ok 10 - actual output policy failure remains quarantined and cannot publish
+  ---
+  duration_ms: 0.698708
+  ...
+# Subtest: small-language repeated geometry error trips regardless of changed seed/text
+ok 11 - small-language repeated geometry error trips regardless of changed seed/text
+  ---
+  duration_ms: 0.972084
+  ...
+# Subtest: different failures still hit global attempt limit
+ok 12 - different failures still hit global attempt limit
+  ---
+  duration_ms: 0.360542
+  ...
+# Subtest: unchanged retry call is refused before second render
+ok 13 - unchanged retry call is refused before second render
+  ---
+  duration_ms: 0.167542
+  ...
+# Subtest: cost reservation stops calls before exceeding allowance
+ok 14 - cost reservation stops calls before exceeding allowance
+  ---
+  duration_ms: 0.395
+  ...
+# Subtest: hung generator is bounded and receives abort signal
+ok 15 - hung generator is bounded and receives abort signal
+  ---
+  duration_ms: 10.113417
+  ...
+# Subtest: isolated failure does not stop another market task
+ok 16 - isolated failure does not stop another market task
+  ---
+  duration_ms: 1.011083
+  ...
+# Subtest: malformed signed contract fails closed before generation
+ok 17 - malformed signed contract fails closed before generation
+  ---
+  duration_ms: 0.089375
+  ...
+# Subtest: empty rendering result cannot be passed to QA as success
+ok 18 - empty rendering result cannot be passed to QA as success
+  ---
+  duration_ms: 0.13575
+  ...
+# Subtest: valid call passes prototype only, never publishes
+ok 19 - valid call passes prototype only, never publishes
+  ---
+  duration_ms: 4.376292
+  ...
+# Subtest: prose, extra fields and fictitious tool/assets cannot execute
+ok 20 - prose, extra fields and fictitious tool/assets cannot execute
+  ---
+  duration_ms: 0.235334
+  ...
+# Subtest: oversized canvas rejected
+ok 21 - oversized canvas rejected
+  ---
+  duration_ms: 0.068625
+  ...
+# Subtest: wrong market policy produces no render
+ok 22 - wrong market policy produces no render
+  ---
+  duration_ms: 0.09625
+  ...
+# Subtest: expired policy produces no render
+ok 23 - expired policy produces no render
+  ---
+  duration_ms: 0.165917
+  ...
+# Subtest: explicit forbidden ID blocks despite detector PASS, then bounded repair
+ok 24 - explicit forbidden ID blocks despite detector PASS, then bounded repair
+  ---
+  duration_ms: 0.845209
+  ...
+# Subtest: omitting motif ID cannot bypass trusted preflight
+ok 25 - omitting motif ID cannot bypass trusted preflight
+  ---
+  duration_ms: 1.314791
+  ...
+# Subtest: high severity rejection never renders
+ok 26 - high severity rejection never renders
+  ---
+  duration_ms: 0.341958
+  ...
+# Subtest: unknown detector report never renders
+ok 27 - unknown detector report never renders
+  ---
+  duration_ms: 1.40525
+  ...
+# Subtest: actual output policy failure remains quarantined and cannot publish
+ok 28 - actual output policy failure remains quarantined and cannot publish
+  ---
+  duration_ms: 3.766292
+  ...
+# Subtest: small-language repeated geometry error trips regardless of changed seed/text
+ok 29 - small-language repeated geometry error trips regardless of changed seed/text
+  ---
+  duration_ms: 1.269791
+  ...
+# Subtest: different failures still hit global attempt limit
+ok 30 - different failures still hit global attempt limit
+  ---
+  duration_ms: 3.189334
+  ...
+# Subtest: unchanged retry call is refused before second render
+ok 31 - unchanged retry call is refused before second render
+  ---
+  duration_ms: 0.988666
+  ...
+# Subtest: cost reservation stops calls before exceeding allowance
+ok 32 - cost reservation stops calls before exceeding allowance
+  ---
+  duration_ms: 0.491709
+  ...
+# Subtest: hung generator is bounded and receives abort signal
+ok 33 - hung generator is bounded and receives abort signal
+  ---
+  duration_ms: 11.348625
+  ...
+# Subtest: isolated failure does not stop another market task
+ok 34 - isolated failure does not stop another market task
+  ---
+  duration_ms: 0.459333
+  ...
+# Subtest: malformed signed contract fails closed before generation
+ok 35 - malformed signed contract fails closed before generation
+  ---
+  duration_ms: 0.071416
+  ...
+# Subtest: empty rendering result cannot be passed to QA as success
+ok 36 - empty rendering result cannot be passed to QA as success
+  ---
+  duration_ms: 0.167875
+  ...
+# Subtest: generator cannot grant itself an asset by mutating its contract copy
+ok 37 - generator cannot grant itself an asset by mutating its contract copy
+  ---
+  duration_ms: 0.546625
+  ...
+# Subtest: caller changes to original contract and policy cannot replace task authority
+ok 38 - caller changes to original contract and policy cannot replace task authority
+  ---
+  duration_ms: 0.214167
+  ...
+# Subtest: inspector cannot hide a declared HIGH motif by mutating policy and plan copies
+ok 39 - inspector cannot hide a declared HIGH motif by mutating policy and plan copies
+  ---
+  duration_ms: 0.538333
+  ...
+# Subtest: mutating previous_call and locked_fields cannot bypass a repair lock or rewrite trace
+ok 40 - mutating previous_call and locked_fields cannot bypass a repair lock or rewrite trace
+  ---
+  duration_ms: 0.575
+  ...
+# Subtest: plan and output ownership survive mutations in downstream adapter payloads
+ok 41 - plan and output ownership survive mutations in downstream adapter payloads
+  ---
+  duration_ms: 0.298292
+  ...
+# Subtest: caller cannot expand a running 3-attempt/12-unit budget
+ok 42 - caller cannot expand a running 3-attempt/12-unit budget
+  ---
+  duration_ms: 1.123333
+  ...
+# Subtest: caller cannot expand a running 3-attempt/4-unit budget
+ok 43 - caller cannot expand a running 3-attempt/4-unit budget
+  ---
+  duration_ms: 0.838416
+  ...
+# Subtest: policy expiry during GENERATE blocks all subsequent adapter dispatch
+ok 44 - policy expiry during GENERATE blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.2975
+  ...
+# Subtest: policy expiry during PRE blocks all subsequent adapter dispatch
+ok 45 - policy expiry during PRE blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.248458
+  ...
+# Subtest: policy expiry during RENDER blocks all subsequent adapter dispatch
+ok 46 - policy expiry during RENDER blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.246292
+  ...
+# Subtest: policy expiry during POST blocks all subsequent adapter dispatch
+ok 47 - policy expiry during POST blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.236792
+  ...
+# Subtest: policy expiry during GEOMETRY blocks all subsequent adapter dispatch
+ok 48 - policy expiry during GEOMETRY blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.172042
+  ...
+# Subtest: wall expiry during GENERATE blocks all subsequent adapter dispatch
+ok 49 - wall expiry during GENERATE blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.074167
+  ...
+# Subtest: wall expiry during PRE blocks all subsequent adapter dispatch
+ok 50 - wall expiry during PRE blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.102083
+  ...
+# Subtest: wall expiry during RENDER blocks all subsequent adapter dispatch
+ok 51 - wall expiry during RENDER blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.109875
+  ...
+# Subtest: wall expiry during POST blocks all subsequent adapter dispatch
+ok 52 - wall expiry during POST blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.203667
+  ...
+# Subtest: wall expiry during GEOMETRY blocks all subsequent adapter dispatch
+ok 53 - wall expiry during GEOMETRY blocks all subsequent adapter dispatch
+  ---
+  duration_ms: 0.163584
+  ...
+# Subtest: policy expiry aborts a hanging generator without starting inspection or render
+ok 54 - policy expiry aborts a hanging generator without starting inspection or render
+  ---
+  duration_ms: 60.699083
+  ...
+# Subtest: caller cannot extend the original policy deadline while generation is running
+ok 55 - caller cannot extend the original policy deadline while generation is running
+  ---
+  duration_ms: 0.316167
+  ...
+# Subtest: caller cannot extend the original wall deadline while generation is running
+ok 56 - caller cannot extend the original wall deadline while generation is running
+  ---
+  duration_ms: 0.153166
+  ...
+# Subtest: inspector cannot invent an approved alternative in its policy copy
+ok 57 - inspector cannot invent an approved alternative in its policy copy
+  ---
+  duration_ms: 0.304667
+  ...
+# Subtest: unknown rule ID in PRE goes to human review despite valid LOW repair information
+ok 58 - unknown rule ID in PRE goes to human review despite valid LOW repair information
+  ---
+  duration_ms: 0.183792
+  ...
+# Subtest: LOW PRE with missing location cannot authorize another attempt
+ok 59 - LOW PRE with missing location cannot authorize another attempt
+  ---
+  duration_ms: 0.158375
+  ...
+# Subtest: LOW PRE with empty location cannot authorize another attempt
+ok 60 - LOW PRE with empty location cannot authorize another attempt
+  ---
+  duration_ms: 0.109167
+  ...
+# Subtest: LOW PRE with missing alternative cannot authorize another attempt
+ok 61 - LOW PRE with missing alternative cannot authorize another attempt
+  ---
+  duration_ms: 0.106875
+  ...
+# Subtest: LOW PRE with both missing cannot authorize another attempt
+ok 62 - LOW PRE with both missing cannot authorize another attempt
+  ---
+  duration_ms: 0.098916
+  ...
+# Subtest: LOW PRE with empty part ID cannot authorize another attempt
+ok 63 - LOW PRE with empty part ID cannot authorize another attempt
+  ---
+  duration_ms: 0.105417
+  ...
+# Subtest: LOW PRE with out of bounds cannot authorize another attempt
+ok 64 - LOW PRE with out of bounds cannot authorize another attempt
+  ---
+  duration_ms: 0.224208
+  ...
+# Subtest: LOW PRE with zero area cannot authorize another attempt
+ok 65 - LOW PRE with zero area cannot authorize another attempt
+  ---
+  duration_ms: 0.1075
+  ...
+# Subtest: LOW PRE with nonfinite location cannot authorize another attempt
+ok 66 - LOW PRE with nonfinite location cannot authorize another attempt
+  ---
+  duration_ms: 0.095208
+  ...
+# Subtest: HIGH PRE remains rejected even without LOW repair prerequisites
+ok 67 - HIGH PRE remains rejected even without LOW repair prerequisites
+  ---
+  duration_ms: 0.124167
+  ...
+# Subtest: unknown rule ID in POST goes to human review despite valid LOW repair information
+ok 68 - unknown rule ID in POST goes to human review despite valid LOW repair information
+  ---
+  duration_ms: 0.141166
+  ...
+# Subtest: LOW POST with missing location cannot authorize another attempt
+ok 69 - LOW POST with missing location cannot authorize another attempt
+  ---
+  duration_ms: 0.125833
+  ...
+# Subtest: LOW POST with empty location cannot authorize another attempt
+ok 70 - LOW POST with empty location cannot authorize another attempt
+  ---
+  duration_ms: 0.127416
+  ...
+# Subtest: LOW POST with missing alternative cannot authorize another attempt
+ok 71 - LOW POST with missing alternative cannot authorize another attempt
+  ---
+  duration_ms: 0.117792
+  ...
+# Subtest: LOW POST with both missing cannot authorize another attempt
+ok 72 - LOW POST with both missing cannot authorize another attempt
+  ---
+  duration_ms: 0.111875
+  ...
+# Subtest: LOW POST with empty part ID cannot authorize another attempt
+ok 73 - LOW POST with empty part ID cannot authorize another attempt
+  ---
+  duration_ms: 0.133583
+  ...
+# Subtest: LOW POST with out of bounds cannot authorize another attempt
+ok 74 - LOW POST with out of bounds cannot authorize another attempt
+  ---
+  duration_ms: 0.121083
+  ...
+# Subtest: LOW POST with zero area cannot authorize another attempt
+ok 75 - LOW POST with zero area cannot authorize another attempt
+  ---
+  duration_ms: 0.140416
+  ...
+# Subtest: LOW POST with nonfinite location cannot authorize another attempt
+ok 76 - LOW POST with nonfinite location cannot authorize another attempt
+  ---
+  duration_ms: 0.137667
+  ...
+# Subtest: HIGH POST remains rejected even without LOW repair prerequisites
+ok 77 - HIGH POST remains rejected even without LOW repair prerequisites
+  ---
+  duration_ms: 0.803792
+  ...
+# Subtest: a forbidden ID cannot also serve as an approved replacement
+ok 78 - a forbidden ID cannot also serve as an approved replacement
+  ---
+  duration_ms: 0.117959
+  ...
+# Subtest: normal scenario enters human review with one render
+ok 79 - normal scenario enters human review with one render
+  ---
+  duration_ms: 2.780125
+  ...
+# Subtest: religion case supplies precise repair evidence and preserves locked values
+ok 80 - religion case supplies precise repair evidence and preserves locked values
+  ---
+  duration_ms: 1.875875
+  ...
+# Subtest: geometry case supplies artifact and stable evidence then stops second repeat
+ok 81 - geometry case supplies artifact and stable evidence then stops second repeat
+  ---
+  duration_ms: 1.915333
+  ...
+# Subtest: evidence enumeration keeps local review distinct from internal data
+ok 82 - evidence enumeration keeps local review distinct from internal data
+  ---
+  duration_ms: 0.124667
+  ...
+# Subtest: first generation receives complete trusted policy snapshot independent of closure
+ok 83 - first generation receives complete trusted policy snapshot independent of closure
+  ---
+  duration_ms: 0.991584
+  ...
+# Subtest: policy body missing or malformed stops before model and render
+ok 84 - policy body missing or malformed stops before model and render
+  ---
+  duration_ms: 0.204
+  ...
+# Subtest: missing or invalid preflight severity escalates before render
+ok 85 - missing or invalid preflight severity escalates before render
+  ---
+  duration_ms: 1.419708
+  ...
+# Subtest: missing post severity quarantines output and prevents repair
+ok 86 - missing post severity quarantines output and prevents repair
+  ---
+  duration_ms: 0.584416
+  ...
+# Subtest: trusted high restriction overrules detector low severity
+ok 87 - trusted high restriction overrules detector low severity
+  ---
+  duration_ms: 1.536292
+  ...
+# Subtest: model mutation of snapshot cannot lower trusted policy
+ok 88 - model mutation of snapshot cannot lower trusted policy
+  ---
+  duration_ms: 1.511334
+  ...
+# Subtest: valid refusal ends after first generation with zero renders
+ok 89 - valid refusal ends after first generation with zero renders
+  ---
+  duration_ms: 0.478916
+  ...
+# Subtest: repair changing locked dimensions stops before second render
+ok 90 - repair changing locked dimensions stops before second render
+  ---
+  duration_ms: 0.701542
+  ...
+1..90
+# tests 90
+# suites 0
+# pass 90
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 187.500042
+
+> oxyra-part1-governed-gift-pipeline@1.0.0 test:planning
+> node --test planning/capacity.test.mjs planning/critical-path.test.mjs planning/submission-plan.test.mjs
+
+TAP version 13
+# Subtest: 51 SKU conserve 50 requirement IDs and audit hours
+ok 1 - 51 SKU conserve 50 requirement IDs and audit hours
+  ---
+  duration_ms: 12.347833
+  ...
+# Subtest: unused early capacity is never borrowed after arrivals
+ok 2 - unused early capacity is never borrowed after arrivals
+  ---
+  duration_ms: 0.523
+  ...
+# Subtest: freeze excludes all reviews and later approvals
+ok 3 - freeze excludes all reviews and later approvals
+  ---
+  duration_ms: 0.32375
+  ...
+# Subtest: rework requires delay and one extra review hour
+ok 4 - rework requires delay and one extra review hour
+  ---
+  duration_ms: 0.226917
+  ...
+# Subtest: extra capacity increases or preserves completed quantity
+ok 5 - extra capacity increases or preserves completed quantity
+  ---
+  duration_ms: 0.962958
+  ...
+# Subtest: unavailable days have zero service
+ok 6 - unavailable days have zero service
+  ---
+  duration_ms: 0.292125
+  ...
+# Subtest: new market can enter capped offline permission with safety approval
+ok 7 - new market can enter capped offline permission with safety approval
+  ---
+  duration_ms: 0.11
+  ...
+# Subtest: history does not bypass missing policy
+ok 8 - history does not bypass missing policy
+  ---
+  duration_ms: 0.05875
+  ...
+# Subtest: release requires separate QA and signature
+ok 9 - release requires separate QA and signature
+  ---
+  duration_ms: 0.320375
+  ...
+# Subtest: mesh checks cannot be applied to pixels and missing evidence waits
+ok 10 - mesh checks cannot be applied to pixels and missing evidence waits
+  ---
+  duration_ms: 0.394
+  ...
+# Subtest: actual mesh defect blocks
+ok 11 - actual mesh defect blocks
+  ---
+  duration_ms: 0.127417
+  ...
+# Subtest: invalid time budget rejected
+ok 12 - invalid time budget rejected
+  ---
+  duration_ms: 0.13525
+  ...
+# Subtest: 51 SKU preserve 50 parent requirements and both REQ-017 variants
+ok 13 - 51 SKU preserve 50 parent requirements and both REQ-017 variants
+  ---
+  duration_ms: 1.049375
+  ...
+# Subtest: workload includes all initial work plus 10 actual rework-production and re-review stages
+ok 14 - workload includes all initial work plus 10 actual rework-production and re-review stages
+  ---
+  duration_ms: 0.163041
+  ...
+# Subtest: spent plus remaining hours conserve every role and total across all scenarios
+ok 15 - spent plus remaining hours conserve every role and total across all scenarios
+  ---
+  duration_ms: 0.167958
+  ...
+# Subtest: raw work events reconcile to each stage and cannot spend future or completed work twice
+ok 16 - raw work events reconcile to each stage and cannot spend future or completed work twice
+  ---
+  duration_ms: 1.782084
+  ...
+# Subtest: no daily role overspend or borrowing of idle days; all roles stop for freeze
+ok 17 - no daily role overspend or borrowing of idle days; all roles stop for freeze
+  ---
+  duration_ms: 0.2125
+  ...
+# Subtest: every successor starts only after its predecessor completed plus the required transfer delay
+ok 18 - every successor starts only after its predecessor completed plus the required transfer delay
+  ---
+  duration_ms: 2.124667
+  ...
+# Subtest: missing production permission allows research but no early production
+ok 19 - missing production permission allows research but no early production
+  ---
+  duration_ms: 0.257167
+  ...
+# Subtest: five pilot acceptances and ten follow-up acceptances are prerequisites to expanding production
+ok 20 - five pilot acceptances and ten follow-up acceptances are prerequisites to expanding production
+  ---
+  duration_ms: 2.238958
+  ...
+# Subtest: rework consumes production capacity and re-review capacity after its two-day waiting period
+ok 21 - rework consumes production capacity and re-review capacity after its two-day waiting period
+  ---
+  duration_ms: 1.8685
+  ...
+# Subtest: moving the freeze later completes all work with exactly 382 active hours
+ok 22 - moving the freeze later completes all work with exactly 382 active hours
+  ---
+  duration_ms: 5.206291
+  ...
+# Subtest: an independent research bottleneck reduces deadline completion
+ok 23 - an independent research bottleneck reduces deadline completion
+  ---
+  duration_ms: 1.380875
+  ...
+# Subtest: an independent production bottleneck reduces deadline completion
+ok 24 - an independent production bottleneck reduces deadline completion
+  ---
+  duration_ms: 1.929458
+  ...
+# Subtest: an independent review bottleneck reduces deadline completion and extra review does not solve all dependencies
+ok 25 - an independent review bottleneck reduces deadline completion and extra review does not solve all dependencies
+  ---
+  duration_ms: 1.009375
+  ...
+# Subtest: three-day evidence wait propagates through the critical path
+ok 26 - three-day evidence wait propagates through the critical path
+  ---
+  duration_ms: 0.08175
+  ...
+# Subtest: reviewer unavailable days remove capacity and lower completed scope
+ok 27 - reviewer unavailable days remove capacity and lower completed scope
+  ---
+  duration_ms: 2.556792
+  ...
+# Subtest: nonpositive handoffs, negative waits and invalid resource budgets are rejected
+ok 28 - nonpositive handoffs, negative waits and invalid resource budgets are rejected
+  ---
+  duration_ms: 0.660916
+  ...
+# Subtest: fixed deadline plan completes 51 SKU and 50 regions by day 18 with all ten reworks retained
+ok 29 - fixed deadline plan completes 51 SKU and 50 regions by day 18 with all ten reworks retained
+  ---
+  duration_ms: 0.287583
+  ...
+# Subtest: fixed deadline extra staffed hours are calculated by day, without borrowing unused baseline capacity
+ok 30 - fixed deadline extra staffed hours are calculated by day, without borrowing unused baseline capacity
+  ---
+  duration_ms: 0.330709
+  ...
+# Subtest: fixed deadline plan still exposes an unabsorbed three-day evidence delay
+ok 31 - fixed deadline plan still exposes an unabsorbed three-day evidence delay
+  ---
+  duration_ms: 0.086333
+  ...
+# Subtest: 明确月初日期与当前剩余13个工作日，不回填已经过去的启动
+ok 32 - 明确月初日期与当前剩余13个工作日，不回填已经过去的启动
+  ---
+  duration_ms: 0.864416
+  ...
+# Subtest: 工作日历支持明确不可用日，非法日期拒绝
+ok 33 - 工作日历支持明确不可用日，非法日期拒绝
+  ---
+  duration_ms: 0.148542
+  ...
+# Subtest: 四文化风险组覆盖50个唯一父需求，REQ017的两件均归稀缺语种组
+ok 34 - 四文化风险组覆盖50个唯一父需求，REQ017的两件均归稀缺语种组
+  ---
+  duration_ms: 0.173875
+  ...
+# Subtest: 技术和文化QA独立守恒且不借用其他文化组工时
+ok 35 - 技术和文化QA独立守恒且不借用其他文化组工时
+  ---
+  duration_ms: 0.214042
+  ...
+# Subtest: 稀缺语种主审未就绪时只等待该组，第5日备审接手
+ok 36 - 稀缺语种主审未就绪时只等待该组，第5日备审接手
+  ---
+  duration_ms: 0.087542
+  ...
+# Subtest: 五件人工对照和比较工作全部入账，新增56h不进入51SKU计数
+ok 37 - 五件人工对照和比较工作全部入账，新增56h不进入51SKU计数
+  ---
+  duration_ms: 0.298125
+  ...
+# Subtest: 对照前后序接力与小语种审核等待不被成本模型隐藏
+ok 38 - 对照前后序接力与小语种审核等待不被成本模型隐藏
+  ---
+  duration_ms: 0.064416
+  ...
+# Subtest: ROI未就绪或未达标时首批可小试，后续制作不会放量
+ok 39 - ROI未就绪或未达标时首批可小试，后续制作不会放量
+  ---
+  duration_ms: 6.482958
+  ...
+# Subtest: ROI通过仍需引用与成本复核，并与前批质量门共同约束
+ok 40 - ROI通过仍需引用与成本复核，并与前批质量门共同约束
+  ---
+  duration_ms: 3.724167
+  ...
+# Subtest: 当前日期的按期全量不能由原20日结果替代，延期需保留两日冻结
+ok 41 - 当前日期的按期全量不能由原20日结果替代，延期需保留两日冻结
+  ---
+  duration_ms: 0.766333
+  ...
+# Subtest: 文化池缺资格映射或工时为零时拒绝排程
+ok 42 - 文化池缺资格映射或工时为零时拒绝排程
+  ---
+  duration_ms: 0.387042
+  ...
+# Subtest: 合格文化审核连续不可用超过两日则该请求转重排，其他组继续
+ok 43 - 合格文化审核连续不可用超过两日则该请求转重排，其他组继续
+  ---
+  duration_ms: 3.119167
+  ...
+# Subtest: 小试晚于第6日时经济比较的三日后序等待随之传播
+ok 44 - 小试晚于第6日时经济比较的三日后序等待随之传播
+  ---
+  duration_ms: 2.420208
+  ...
+# Subtest: 名义7h对8h仅改善12.5%，预算不能被自动当成15%ROI达标
+ok 45 - 名义7h对8h仅改善12.5%，预算不能被自动当成15%ROI达标
+  ---
+  duration_ms: 0.050375
+  ...
+# Subtest: 即使峰值资源和前置经济证据充足，三批返工链最早第16工作日才全量
+ok 46 - 即使峰值资源和前置经济证据充足，三批返工链最早第16工作日才全量
+  ---
+  duration_ms: 4.612958
+  ...
+# Subtest: 峰值加配只改变既有217h的预约方式，真实经济证据待补仍阻断扩量
+ok 47 - 峰值加配只改变既有217h的预约方式，真实经济证据待补仍阻断扩量
+  ---
+  duration_ms: 3.145541
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 47
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 140.32325
+
+> oxyra-part1-governed-gift-pipeline@1.0.0 check:examples
+> node scripts/check-examples.mjs
+
+PASS · 调用 JSON、拒绝 JSON 和合成适配器示例；未发布资产。

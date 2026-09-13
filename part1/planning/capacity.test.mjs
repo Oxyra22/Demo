@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {simulate,permission,qaStatus} from './capacity.mjs';
+test('51 SKU conserve 50 requirement IDs and audit hours',()=>{const r=simulate();assert.equal(r.tasks.length,51);assert.equal(new Set(r.tasks.map(t=>t.parent)).size,50);assert.equal(r.summary.approved_skus+r.summary.deferred.length,51);assert(r.daily.every(d=>d.used_h<=d.capacity_h))});
+test('unused early capacity is never borrowed after arrivals',()=>{const r=simulate();assert.equal(r.daily[0].used_h,0);assert.equal(r.daily[1].used_h,0);assert.equal(r.daily[2].capacity_h,6)});
+test('freeze excludes all reviews and later approvals',()=>{const r=simulate({reviewHours:100});assert(r.daily.filter(d=>d.day>=19).every(d=>d.used_h===0));assert(r.tasks.every(t=>!t.approvedDay||t.approvedDay<19))});
+test('rework requires delay and one extra review hour',()=>{const r=simulate({reviewHours:100});assert(r.tasks.filter(t=>t.needsRework).every(t=>t.approvedDay>=t.firstReviewDay+2));assert.equal(r.summary.used_h,112)});
+test('extra capacity increases or preserves completed quantity',()=>assert(simulate({reviewHours:9}).summary.approved_skus>=simulate().summary.approved_skus));
+test('unavailable days have zero service',()=>assert(simulate({unavailableDays:[11,12]}).daily.filter(d=>[11,12].includes(d.day)).every(d=>d.used_h===0)));
+test('new market can enter capped offline permission with safety approval',()=>assert.equal(permission({policyValid:true,rightsClear:true,localReviewer:true,offlineBudgetApproved:true}),'BOUNDED_COLD_START_OFFLINE'));
+test('history does not bypass missing policy',()=>assert.equal(permission({internalDemandEvidence:true,releaseSigned:true}),'RESEARCH_ONLY'));
+test('release requires separate QA and signature',()=>{const p={policyValid:true,rightsClear:true,localReviewer:true,offlineBudgetApproved:true};assert.equal(permission({...p,qaComplete:true}),'BOUNDED_COLD_START_OFFLINE');assert.equal(permission({...p,qaComplete:true,releaseSigned:true}),'APPROVED_RELEASE_SCOPE')});
+test('mesh checks cannot be applied to pixels and missing evidence waits',()=>{assert.equal(qaStatus({kind:'png'}),'WRONG_ARTIFACT_TYPE');assert.equal(qaStatus({kind:'mesh',artifactHash:'1',reportHash:'2'}),'PENDING_QA')});
+test('actual mesh defect blocks',()=>assert.equal(qaStatus({kind:'mesh',artifactHash:'1',reportHash:'1',evidenceRef:'synthetic',measurements:{self_intersections:1,invalid_faces:0,triangle_count:10}}),'BLOCK'));
+test('invalid time budget rejected',()=>assert.throws(()=>simulate({reworkDelay:0})));

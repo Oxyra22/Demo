@@ -1,0 +1,21 @@
+{
+  "ref": "SYNTHETIC-P1",
+  "route": "SIM-CULTURE-017",
+  "expires_at": 4102444800000,
+  "forbidden_ids": [
+    "SYNTHETIC-FORBIDDEN-01"
+  ],
+  "rules": [
+    {
+      "id": "SYNTHETIC-FORBIDDEN-01",
+      "description": "Synthetic restricted ornament; this fixture describes no real religious symbol.",
+      "severity": "LOW"
+    }
+  ],
+  "approved_alternatives": [
+    {
+      "id": "SAFE-ARC-01",
+      "description": "Approved abstract non-sacred arc in the same location"
+    }
+  ]
+}

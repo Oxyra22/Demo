@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import { DEFAULT_INPUT, validateInput, createEvidencePack, createGiftContract, generateCandidates, applyBoundedRevision, runStructureQA, runCultureReview, evaluateCircuitBreaker, runPipeline, runDeterministicAudit } from '../pipeline.mjs';
+
+const evidence = createEvidencePack(DEFAULT_INPUT);
+const contract = createGiftContract(DEFAULT_INPUT, evidence);
+const candidates = generateCandidates(contract);
+const qa = runStructureQA(candidates);
+const culture = runCultureReview(candidates, contract);
+const result = runPipeline(DEFAULT_INPUT);
+const audit = runDeterministicAudit();
+
+assert.equal(validateInput(DEFAULT_INPUT).valid, true);
+assert.deepEqual(validateInput({}).missing.length, 7);
+assert.equal(evidence.decision_maturity, 'E1_PUBLIC_SIGNAL');
+assert.equal(evidence.gate, 'PROTOTYPE_ONLY');
+assert.equal(contract.approval.publish_owner, null);
+assert.equal(contract.policy.no_real_religious_symbol_inference, true);
+assert.equal(candidates.length, 3);
+assert.equal(new Set(candidates.map((item) => item.mechanism)).size, 3);
+assert.equal(qa.retry_count, 1);
+assert.equal(qa.bounded_revision.render_scale, 0.86);
+assert.equal(qa.bounded_revision.form, candidates[0].form);
+assert.throws(() => applyBoundedRevision(candidates[0], { mechanism: 'UNSCOPED_CHANGE' }), /Unscoped revision field/);
+const blocked = culture.decisions.find((item) => item.candidate_id === 'C-02');
+assert.equal(blocked.decision, 'REJECT');
+assert.equal(blocked.render_call, null);
+assert.deepEqual(blocked.matched_symbol_ids, ['policy-symbol-id-017']);
+assert.equal(evaluateCircuitBreaker(['same','same']).state, 'OPEN');
+assert.equal(evaluateCircuitBreaker(['a','b']).state, 'CLOSED');
+assert.equal(result.ok, true);
+assert.equal(result.events.length, 6);
+assert.equal(result.summary.candidates, 3);
+assert.equal(result.summary.policy_rejects, 1);
+assert.equal(result.summary.prototype_gate, 'PASS');
+assert.equal(result.summary.production_release, 'BLOCKED');
+assert.equal(result.summary.published, false);
+assert.equal(result.artifacts.final_package.renderer.tool, 'procedural_three_scene');
+assert.equal(audit.total, 8);
+assert.equal(audit.passed, 8);
+assert.equal(audit.failed, 0);
+
+console.log('PASS · 28 pipeline assertions · 8/8 deterministic audit gates');

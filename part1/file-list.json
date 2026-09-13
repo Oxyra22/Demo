@@ -1,0 +1,174 @@
+{
+  "author": "Oxyra",
+  "note": "此清单列出生成它之前的文件，不含 file-list.json 自身；总字节口径同此清单。",
+  "source_hashes_match_with_documented_normalization": true,
+  "file_count": 33,
+  "total_bytes": 233285,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 66,
+      "sha256": "0f2cb301077612c7fb2f8d4c206de28ef101493e6ac18ec27b435ec2580878f6"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5234,
+      "sha256": "bd7d53c3877c88742c769bd4dbc4c49aac3caa20c8ddc0105d5c1582591a770d"
+    },
+    {
+      "path": "docs/part1_正式正文.md",
+      "bytes": 42234,
+      "sha256": "a488b54fe9161e4814a150032abaa3d3d181a257ddd02c136ca19212deb7abd0"
+    },
+    {
+      "path": "docs/两地文化证据卡.md",
+      "bytes": 3676,
+      "sha256": "f90e3e9bffe247200b0a097ce7c4facfd56f39c8820a392c016c898c7955d739"
+    },
+    {
+      "path": "evidence/plan-summary.txt",
+      "bytes": 23533,
+      "sha256": "87617168c93501cef4ac3e2ee9ac8fd619830639b87b729b1b768656cb70ec8f"
+    },
+    {
+      "path": "evidence/scenarios.txt",
+      "bytes": 1094,
+      "sha256": "3e513801e16b13d0b973dad272e71f5f734998988eb5953c2b793c11b88004df"
+    },
+    {
+      "path": "evidence/test-all.txt",
+      "bytes": 25871,
+      "sha256": "eabf8b6398c2aa06b85ed7f5f4f20e2a6ac19cba494bd7a452ea5b2f90d0f83e"
+    },
+    {
+      "path": "evidence/verification.json",
+      "bytes": 800,
+      "sha256": "99393417150584d1dc5be6a7ad380f16f191a58788ab233884390fbb3ddc98a9"
+    },
+    {
+      "path": "examples/contract.json",
+      "bytes": 269,
+      "sha256": "1166f5b91195fa02509a3196233e0ce1f8ed78d07ecf882619dd2825c7927676"
+    },
+    {
+      "path": "examples/policy.json",
+      "bytes": 490,
+      "sha256": "36605c53fee3e2a1fdaaa3934f55af17a6440a6ffa2c52d032ada3d76fa3c3d8"
+    },
+    {
+      "path": "examples/refusal.json",
+      "bytes": 178,
+      "sha256": "90025a90c605306d903fb287275a91971cbb1ce177dfe850f290bfd8f7759dc6"
+    },
+    {
+      "path": "examples/render-call.json",
+      "bytes": 400,
+      "sha256": "bc8f8c0a4d08a19e24b4825fc8b15ac92d2405d112e79f274751df494168f508"
+    },
+    {
+      "path": "examples/沟通成本实验空表.csv",
+      "bytes": 781,
+      "sha256": "931c54364d0c9b11fbac19b55f47dc1cad13491f8e64d9d9c42a06766c42f08f"
+    },
+    {
+      "path": "governed-runner-v2.mjs",
+      "bytes": 8653,
+      "sha256": "6300af860b07ab8d1d47acf09da122469f025a8a6a2116ffa61dbad26c794ee3"
+    },
+    {
+      "path": "governed-runner-v3.mjs",
+      "bytes": 14862,
+      "sha256": "29f272f183999cd92549fab7792e8f745a6eb365f24cc0ffb1ed1840d5fa0474"
+    },
+    {
+      "path": "governed-scenarios-v3.mjs",
+      "bytes": 2672,
+      "sha256": "cbfbd8f4f2d7bfde8c2f280eb3dd6e08ea1b40a795029373b662e03702d9dfb5"
+    },
+    {
+      "path": "package.json",
+      "bytes": 844,
+      "sha256": "bf991cf6241461bebe72dd55838de667720584088097efaabdb64e4ba799e6b9"
+    },
+    {
+      "path": "pipeline.mjs",
+      "bytes": 12936,
+      "sha256": "5a2367561afa80eef70891cc34d4d05703f87a70d3b8826a3498ea68e8f32b86"
+    },
+    {
+      "path": "planning/capacity.mjs",
+      "bytes": 3600,
+      "sha256": "8c5be70b4a474f1c4a03a0f624b5e714c3696ca2cb8a5cd8a2115da515977009"
+    },
+    {
+      "path": "planning/capacity.test.mjs",
+      "bytes": 2569,
+      "sha256": "6b2b992aef54734796ee0cf2345a3e5c16382d147aa7ae8d0201fc73e93fbd07"
+    },
+    {
+      "path": "planning/critical-path.mjs",
+      "bytes": 15172,
+      "sha256": "d48d1609782b72859fe0efa5fa0969dec8525dc9e7a7e1b50186ebf6753c5318"
+    },
+    {
+      "path": "planning/critical-path.test.mjs",
+      "bytes": 8743,
+      "sha256": "b7f331be976cf9969264e632e50b28c51199e3b01dcdc4583710858f0ccb020a"
+    },
+    {
+      "path": "planning/submission-plan.mjs",
+      "bytes": 9584,
+      "sha256": "cfdbf760cd7ce76a7dac5382d847b813212dfc815b3cfaf96e700689add56d87"
+    },
+    {
+      "path": "planning/submission-plan.test.mjs",
+      "bytes": 8723,
+      "sha256": "3ad9f7748a8841789a0215e938d6874db8c68c1cf385f67e094061cf1a8e7178"
+    },
+    {
+      "path": "schemas/generation-response.schema.json",
+      "bytes": 2845,
+      "sha256": "7c8e6ae21e81ca65cfc3125d5ae14896f5e5a90cd0eece08830827d66e79d370"
+    },
+    {
+      "path": "scripts/check-examples.mjs",
+      "bytes": 1041,
+      "sha256": "a34af3416123c3d45451af749ae0d1f7ae38c273b37425257887a0215dc3caca"
+    },
+    {
+      "path": "scripts/run-plan.mjs",
+      "bytes": 800,
+      "sha256": "2fdda3ea25cbd1f2d64a422400c2095ba983e0d5a293ad9933e76fa6ca36af6b"
+    },
+    {
+      "path": "scripts/run-scenarios.mjs",
+      "bytes": 906,
+      "sha256": "00e2d47c43234ff4a00f961192ea249a9f998a06749b696505d5a6a880a2967f"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 3103,
+      "sha256": "4f628f3abe948fb1ee1f4ed17980055f0819dee17fe483b69238c5f7269933bd"
+    },
+    {
+      "path": "tests/governed-v2.test.mjs",
+      "bytes": 6360,
+      "sha256": "119a9e43cf5706f10d68b84981c8fa699b5ffb6b45c343167c0f2a7181f1b3e4"
+    },
+    {
+      "path": "tests/governed-v3-regression.test.mjs",
+      "bytes": 17019,
+      "sha256": "d0c38651bbd7ee22673b85f3dea38973dd0c925e62df259be6b6aa151f132cbc"
+    },
+    {
+      "path": "tests/governed-v3.test.mjs",
+      "bytes": 5934,
+      "sha256": "902ae5db340d08365ede89a772c9f4389a207c3bb9ddb29699b5dc8f8f88cd3f"
+    },
+    {
+      "path": "tests/pipeline.test.mjs",
+      "bytes": 2293,
+      "sha256": "0b4d74c752a45cc30bfcee40e3d0a5ed39ce890e0994d2d103c0929ed3043c07"
+    }
+  ]
+}
